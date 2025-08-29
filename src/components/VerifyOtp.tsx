@@ -98,6 +98,7 @@ export default function VerifyOtp({ onLogin }: VerifyOtpProps) {
     setLoading(true);
     try {
       const res = await API.post("/auth/request-otp", { email });
+      console.log(res);
       setMsg("OTP resent successfully");
       setCountdown(60); // Reset countdown
     } catch (err: any) {
