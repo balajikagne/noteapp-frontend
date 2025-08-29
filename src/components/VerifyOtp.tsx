@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../api/api";
+import { Link } from "react-router-dom";
 
 import "./VerifyOtp.css";
 
@@ -192,17 +193,17 @@ export default function VerifyOtp({ onLogin }: VerifyOtpProps) {
         )}
         
         <div className="verify-footer">
-          <p>Need an account ?
-            <a 
-             
-              href="/signup"
-              className="back-btn"
-              style={{fontFamily:"initial"}}
-            >
-            Create One
-            </a>
-          </p>
-        </div>
+  <p>
+    Need an account?{" "}
+    <Link 
+      to="/signup"
+      className="back-btn"
+      style={{ fontFamily: "initial", textDecoration: "none", color: "#4299e1" }}
+    >
+      Create One
+    </Link>
+  </p>
+</div>
       </div>
     </div>
   );
