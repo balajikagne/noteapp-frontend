@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../api/api";
-import { useNavigate } from "react-router-dom";
+
 import "./VerifyOtp.css";
 
 interface VerifyOtpProps {
@@ -15,7 +15,7 @@ export default function VerifyOtp({ onLogin }: VerifyOtpProps) {
   const [msg, setMsg] = useState("");
   const [otpSent, setOtpSent] = useState(false);
   const [countdown, setCountdown] = useState(0);
-  const navigate = useNavigate();
+
 
   // Check if there's a pending email from localStorage
   useEffect(() => {
@@ -98,6 +98,7 @@ export default function VerifyOtp({ onLogin }: VerifyOtpProps) {
     setLoading(true);
     try {
       const res = await API.post("/auth/request-otp", { email });
+      console.log(res);
       setMsg("OTP resent successfully");
       setCountdown(60); // Reset countdown
     } catch (err: any) {
