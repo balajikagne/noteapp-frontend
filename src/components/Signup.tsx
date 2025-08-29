@@ -3,7 +3,7 @@ import API from "../api/api";
 import "./Signup.css";
 import { jwtDecode } from 'jwt-decode';
 import { useNavigate } from "react-router-dom";
-import { Calendar } from "lucide-react"; // calendar icon
+
 interface SignupProps {
   onLogin: (token: string, userData: any) => void;
 }
