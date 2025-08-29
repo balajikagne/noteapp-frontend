@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../api/api";
-import { useNavigate } from "react-router-dom";
+
 import "./VerifyOtp.css";
 
 interface VerifyOtpProps {
