@@ -15,7 +15,7 @@ export default function VerifyOtp({ onLogin }: VerifyOtpProps) {
   const [msg, setMsg] = useState("");
   const [otpSent, setOtpSent] = useState(false);
   const [countdown, setCountdown] = useState(0);
-  const navigate = useNavigate();
+  
 
   // Check if there's a pending email from localStorage
   useEffect(() => {
