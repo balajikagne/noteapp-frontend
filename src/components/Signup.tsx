@@ -3,7 +3,7 @@ import API from "../api/api";
 import "./Signup.css";
 import { jwtDecode } from 'jwt-decode';
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 interface SignupProps {
   onLogin: (token: string, userData: any) => void;
 }
@@ -185,7 +185,28 @@ export default function Signup({ onLogin }: SignupProps) {
             )}
           </button>
         </form>
-       <div style={{display:"flex",justifyContent:"center",marginTop:"20px"}}>Already have an account ?<a href="/verify" style={{color:"#4299e1",fontWeight:"10px",fontFamily:"initial"}} className="privacy-link"  rel="noopener noreferrer">Sign In</a></div>
+       <div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "20px",
+  }}
+>
+  Already have an account?{" "}
+  <Link
+    to="/verify"
+    style={{
+      color: "#4299e1",
+      fontWeight: "500",
+      fontFamily: "initial",
+      textDecoration: "none",
+    }}
+    className="privacy-link"
+  >
+    Sign In
+  </Link>
+</div>
+
         
         {msg && (
           <div className={`message ${msg.includes("failed") || msg.includes("invalid") || msg.includes("error") ? "error" : "success"}`}>
