@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:4000"
+  baseURL: import.meta.env.VITE_API_URL || "https://new-note-app-backend.vercel.app/"
 });
 
 // Request interceptor to automatically add auth token from cookies
