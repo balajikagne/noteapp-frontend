@@ -62,7 +62,7 @@ export default function Signup({ onLogin }: SignupProps) {
       });
       
       // Extract token from response
-      const { token, user } = res.data;
+      const { token } = res.data;
       
       if (token) {
         // Decode token to get user info
